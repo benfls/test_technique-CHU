@@ -24,10 +24,10 @@ def main():
     # Compter le nombre de rôles par acteur et retourner les top 100
     df_count = (
         df_merge
-        .groupby(['id', 'first_name', 'last_name'], as_index=False)
+        .groupby(['actor_id', 'first_name', 'last_name', "gender"], as_index=False)
         .size()
-        .rename(columns={'size': 'role_count'})
-        .sort_values(by='role_count', ascending=False)
+        .rename(columns={'size': 'num_roles'})
+        .sort_values(by='num_roles', ascending=False)
         .head(100)
     )
 
