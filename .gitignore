@@ -1,3 +1,8 @@
+final_result.json
+
+# Data files
+data/*.gz
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
